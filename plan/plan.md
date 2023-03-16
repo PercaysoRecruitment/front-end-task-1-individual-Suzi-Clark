@@ -1,10 +1,16 @@
 # Plan
 
-- install next, react, typescript, mocha, chai, sinon(?)
-- sort test script and typescript config
-- plan out React components (excalidraw) & state
-- set up file and folder structure
+- install next, react, typescript, mocha, chai, sinon(?) ✅
+- sort test script and typescript config ✅
+- plan out React components (excalidraw) & state ✅
+- set up file and folder structure ✅
 - create a test for a component (mocha/chai/sinon) then work on code and back to tests etc.
+
+        - GameBoard
+        - GameButton
+        - Index Page
+        - EndGame
+        
 - Go component by component doing that and rendering them on the page as I go
 - research github actions
 - try to automate tests with GitHub Actions

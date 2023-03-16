@@ -11,7 +11,7 @@
     "module": "CommonJS", //<-- tests don't work unless this is CommonJS, don't know why
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true,
+    "isolatedModules": false, //<-- this stops it getting angry about tests that don't have an export
     "jsx": "preserve",
     "incremental": true,
     "paths": {
