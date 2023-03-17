@@ -1,7 +1,34 @@
 import Head from 'next/head'
 import GameBoard from '@/components/GameBoard'
+import React from 'react'
+import { useState } from 'react'
+import { gridTuple } from '@/types'
+
+//PLAN
+//Hold win, lose or game in progress state, render either GameBoard or EndGame depending on this
+//Hold logic for figuring whether anyone has won yet
+//Hold true/false boolean state for noughts or crosses next.
+//Hold on Click logic function and pass down to GameButton via GameBoard (or could make customhook)
+//onClick function: 
+//1) puts an 0 or X on the button as text
+//2) updates the state so the next click puts X in if 0 last time etc.
+//3) updates a grid state with which button now has an X or 0
+//4) disables the button after it has been clicked. 
+// handleClick should just take (e: React.ClickEvent<HTMLInputElement>) as arg
+//5) call the win checker function from index.
+
+// EndGame rendered conditionally if win is true
 
 export default function Home() {
+  enum Win {IN_PROGRESS, NOUGHTS_WIN, CROSSES_WIN};
+  const [win, setWin] = useState(Win.IN_PROGRESS)
+  const [noughtsNext, setNoughtsNext] = useState(true)
+  const [grid, setGrid] = useState<gridTuple>([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' '])
+
+  function handleClick() {
+    console.log('clicked')
+  }
+
   return (
     <>
       <Head>
@@ -12,7 +39,7 @@ export default function Home() {
       </Head>
       <main>     
           <h1>Noughts & Crosses</h1>
-          <GameBoard/>
+          <GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid}/>
       </main>
     </>
   )
