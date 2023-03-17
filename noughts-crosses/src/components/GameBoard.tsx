@@ -12,6 +12,8 @@ type gameBoardProps = {
 
 export default function GameBoard({handleClick, noughtsNext, grid}: gameBoardProps) {
     
+    
+
     return (<div>
         <h2>Gameboard here.</h2>
         <div className='game-board'>

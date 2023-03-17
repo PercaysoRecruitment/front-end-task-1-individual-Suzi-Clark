@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "es5",
     "lib": [
       "dom",
       "dom.iterable",
@@ -12,10 +12,10 @@
     "forceConsistentCasingInFileNames": true,
     "noEmit": true,
     "esModuleInterop": true,
-    "module": "CommonJS", //<-- tests don't work unless this is CommonJS, don't know why
+    "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
-    "isolatedModules": true, //<-- this stops it getting angry about tests that don't have an export
+    "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
     "paths": {
@@ -27,7 +27,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "jest.config.js"
   ],
   "exclude": [
     "node_modules"
