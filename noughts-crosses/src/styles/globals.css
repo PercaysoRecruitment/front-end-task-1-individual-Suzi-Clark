@@ -1,0 +1,16 @@
+body {
+    text-align: center;
+  }
+
+.game-board {
+    display: grid;   
+    grid-template-columns: 15vh 15vh 15vh;
+    grid-auto-rows: 15vh;
+    justify-content: center;
+}
+
+.game-button {
+    width: 95%;
+    height: 95%;
+    font-size: 50pt;
+}
