@@ -5,14 +5,14 @@
 - sort test script and typescript config ✅
 - plan out React components (excalidraw) & state ✅
 - set up file and folder structure ✅
-- create a test for a component (Jest/ React Testing Library) then work on code and back to tests etc.
+- create a test for a component (Jest/ React Testing Library) then work on code and back to tests etc. ✅
 
-        - GameBoard
-        - GameButton
-        - Index Page
-        - EndGame
+        - GameBoard ✅
+        - GameButton ✅
+        - Index Page ✅
+        - EndGame ✅
         
-- Go component by component doing that and rendering them on the page as I go
+- Go component by component doing that and rendering them on the page as I go ✅
 - Fix issue where you have to click again after you have won for the game to update ✅ (FIXED - useEffect)
 - research github actions
 - try to automate tests with GitHub Actions

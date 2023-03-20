@@ -29,6 +29,7 @@ export default function Home() {
   function handleClick(e: Event) {
     const target = e.target as HTMLButtonElement;
     if (target) {
+      target.disabled = true;
       const gridIndex =  +(target.id);
       if (noughtsNext) {
         const newGrid: gridTuple = [...grid.slice(0, gridIndex), '0', ...grid.slice(gridIndex + 1)]
