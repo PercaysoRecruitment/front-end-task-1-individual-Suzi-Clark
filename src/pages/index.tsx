@@ -2,7 +2,7 @@ import Head from 'next/head'
 import GameBoard from '@/components/GameBoard'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { gridTuple } from '@/types'
+import { gridArray, gridTuple } from '@/types'
 import EndGame from '@/components/EndGame'
 
 //PLAN
@@ -24,7 +24,7 @@ type endConditions = 'Progress' | "X's Win!" | "0's Win!" | "It's a Draw!"
 export default function Home() {
   const [win, setWin] = useState<endConditions>('Progress')
   const [noughtsNext, setNoughtsNext] = useState(true)
-  const [grid, setGrid] = useState<gridTuple>([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' '])
+  const [grid, setGrid] = useState<gridArray>([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' '])
 
   function handleClick(e: Event) {
     const target = e.target as HTMLButtonElement;
@@ -32,10 +32,10 @@ export default function Home() {
       target.disabled = true;
       const gridIndex =  +(target.id);
       if (noughtsNext) {
-        const newGrid: gridTuple = [...grid.slice(0, gridIndex), '0', ...grid.slice(gridIndex + 1)]
+        const newGrid: gridArray = [...grid.slice(0, gridIndex), '0', ...grid.slice(gridIndex + 1)]
         setGrid(newGrid)
       } else {
-        const newGrid: gridTuple = [...grid.slice(0, gridIndex), 'X', ...grid.slice(gridIndex + 1)]
+        const newGrid: gridArray = [...grid.slice(0, gridIndex), 'X', ...grid.slice(gridIndex + 1)]
         setGrid(newGrid)
       }
       setNoughtsNext(!noughtsNext);
@@ -46,7 +46,7 @@ export default function Home() {
     winCondition(grid);
   }, [grid])
 
-  function checkWin(grid: gridTuple, n: string): boolean {
+  function checkWin(grid: gridArray, n: string): boolean {
     if ((grid[0] === n) && (grid[1] === n) && (grid[2] === n)) {
       return true;
     }
@@ -76,7 +76,7 @@ export default function Home() {
     }
   }
 
-  function winCondition(grid: gridTuple): void {
+  function winCondition(grid: gridArray): void {
     if (checkWin(grid, 'X')) {
       setWin("X's Win!");
     }

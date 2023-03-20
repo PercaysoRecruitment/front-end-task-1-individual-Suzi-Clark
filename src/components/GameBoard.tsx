@@ -1,10 +1,10 @@
 import React from "react";
 import GameButton from "./GameButton";
-import { gridTuple } from "@/types";
+import { gridArray } from "@/types";
 
 type gameBoardProps = {
   handleClick: any;
-  grid: gridTuple;
+  grid: gridArray;
 };
 
 export default function GameBoard({
