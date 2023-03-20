@@ -13,8 +13,11 @@
         - EndGame
         
 - Go component by component doing that and rendering them on the page as I go
+- Fix issue where you have to click again after you have won for the game to update ✅ (FIXED - useEffect)
 - research github actions
 - try to automate tests with GitHub Actions
+- Custom hooks
+- Check I have done FP properly and tidy any 'any's
 - CSS it
 - Cypress tests
 - deploy

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import GameBoard from '@/components/GameBoard'
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { gridTuple } from '@/types'
 import EndGame from '@/components/EndGame'
 
@@ -38,9 +38,12 @@ export default function Home() {
         setGrid(newGrid)
       }
       setNoughtsNext(!noughtsNext);
-      winCondition(grid);
     }
   }
+
+  useEffect(() => {
+    winCondition(grid);
+  }, [grid])
 
   function checkWin(grid: gridTuple, n: string): boolean {
     if ((grid[0] === n) && (grid[1] === n) && (grid[2] === n)) {
@@ -85,6 +88,7 @@ export default function Home() {
     }
   }
 
+
   return (
     <>
       <Head>
@@ -96,7 +100,7 @@ export default function Home() {
       <main>     
           <h1>Noughts & Crosses</h1>
           {(win === 'Progress') ?
-          (<GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid}/>) :
+          (<GameBoard handleClick={handleClick} grid={grid}/>) :
           (<EndGame winner={win}/>)
           }
       </main>

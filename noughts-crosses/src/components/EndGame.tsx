@@ -10,7 +10,7 @@ export default function EndGame({winner}: endProps) {
         window.location.reload();
     }
 
-    return (<div>
+    return (<div data-testid='end-game'>
         <h2>{winner}!</h2>
         <button type="button" onClick={refreshPage}>Play Again?</button>
     </div>)
