@@ -2,7 +2,7 @@ import Head from 'next/head'
 import GameBoard from '@/components/GameBoard'
 import React from 'react'
 import { useState, useEffect } from 'react'
-import { gridArray, gridTuple } from '@/types'
+import { gridArray } from '@/types'
 import EndGame from '@/components/EndGame'
 
 //PLAN
