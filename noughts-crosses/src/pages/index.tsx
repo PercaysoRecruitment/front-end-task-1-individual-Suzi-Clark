@@ -3,6 +3,7 @@ import GameBoard from '@/components/GameBoard'
 import React from 'react'
 import { useState } from 'react'
 import { gridTuple } from '@/types'
+import EndGame from '@/components/EndGame'
 
 //PLAN
 //Hold win, lose or game in progress state, render either GameBoard or EndGame depending on this
@@ -18,15 +19,70 @@ import { gridTuple } from '@/types'
 //5) call the win checker function from index.
 
 // EndGame rendered conditionally if win is true
+type endConditions = 'Progress' | "X's Win!" | "0's Win!" | "It's a Draw!"
 
 export default function Home() {
-  enum Win {IN_PROGRESS, NOUGHTS_WIN, CROSSES_WIN};
-  const [win, setWin] = useState(Win.IN_PROGRESS)
+  const [win, setWin] = useState<endConditions>('Progress')
   const [noughtsNext, setNoughtsNext] = useState(true)
   const [grid, setGrid] = useState<gridTuple>([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' '])
 
-  function handleClick() {
-    console.log('clicked')
+  function handleClick(e: Event) {
+    const target = e.target as HTMLButtonElement;
+    if (target) {
+      const gridIndex =  +(target.id);
+      if (noughtsNext) {
+        const newGrid: gridTuple = [...grid.slice(0, gridIndex), '0', ...grid.slice(gridIndex + 1)]
+        setGrid(newGrid)
+      } else {
+        const newGrid: gridTuple = [...grid.slice(0, gridIndex), 'X', ...grid.slice(gridIndex + 1)]
+        setGrid(newGrid)
+      }
+      setNoughtsNext(!noughtsNext);
+      winCondition(grid);
+    }
+  }
+
+  function checkWin(grid: gridTuple, n: string): boolean {
+    if ((grid[0] === n) && (grid[1] === n) && (grid[2] === n)) {
+      return true;
+    }
+    else if ((grid[3] === n) && (grid[4] === n) && (grid[5] === n)) {
+      return true;
+    }
+    else if ((grid[6] === n) && (grid[7] === n) && (grid[8] === n)) {
+      return true;
+    }
+    else if ((grid[0] === n) && (grid[3] === n) && (grid[6] === n)) {
+      return true;
+    }
+    else if ((grid[1] === n) && (grid[4] === n) && (grid[7] === n)) {
+      return true;
+    }
+    else if ((grid[2] === n) && (grid[5] === n) && (grid[8] === n)) {
+      return true;
+    }
+    else if ((grid[6] === n) && (grid[4] === n) && (grid[2] === n)) {
+      return true;
+    }
+    else if ((grid[0] === n) && (grid[4] === n) && (grid[8] === n)) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
+
+  function winCondition(grid: gridTuple): void {
+    if (checkWin(grid, 'X')) {
+      setWin("X's Win!");
+    }
+    else if (checkWin(grid, '0')) {
+      setWin("0's Win!");
+    }
+    else if (!grid.includes(' ')) {
+      console.log(grid);
+      setWin("It's a Draw!");
+    }
   }
 
   return (
@@ -39,7 +95,10 @@ export default function Home() {
       </Head>
       <main>     
           <h1>Noughts & Crosses</h1>
-          <GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid}/>
+          {(win === 'Progress') ?
+          (<GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid}/>) :
+          (<EndGame winner={win}/>)
+          }
       </main>
     </>
   )

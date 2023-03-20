@@ -22,28 +22,8 @@ describe('GameBoard', () => {
   });
 
   test('renders instructions on the page', () => {
+    render(<GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid} />);
     const info = screen.getByTestId('instructions')
     expect(info).toBeInTheDocument();
   })
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// test("renders all 9 noughts and crosses buttons", () => {
-//   //render GameBoard here - need to work out how to mock props
-//   render(<GameBoard handleClick={() => console.log('hi')} noughtsNext={true} grid={[' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ']}/>);
-//   const gameButtons = screen.getByRole('button');
-
-// });
