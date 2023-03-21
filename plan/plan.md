@@ -19,7 +19,7 @@
 - Custom hooks ✅
 - Check I have done FP properly and tidy any 'any's ✅
 - CSS it ✅
-- Cypress tests
+- Cypress tests ✅
 - deploy
 
 ## Functionality Planning
