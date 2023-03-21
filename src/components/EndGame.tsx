@@ -11,8 +11,8 @@ export default function EndGame({ winner }: endProps) {
 
   return (
     <div data-testid="end-game">
-      <h2>{winner}!</h2>
-      <button type="button" onClick={refreshPage}>
+      <h2>{winner}!!</h2>
+      <button type="button" onClick={refreshPage} id="play-again">
         Play Again?
       </button>
     </div>

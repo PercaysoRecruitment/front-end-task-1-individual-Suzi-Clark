@@ -17,8 +17,8 @@ export default function GameBoard({ handleClick, grid }: gameBoardProps) {
         <br />
         Get 3 in a vertical, horizontal or diagonal line to win.
         <br />
-        <strong>Click a square to play!</strong>
       </p>
+        <p id="click-instruction"><strong>Click a square to play!</strong></p>
       <div data-testid="game-board" className="game-board">
         {grid.map((item, index) => (
           <GameButton
