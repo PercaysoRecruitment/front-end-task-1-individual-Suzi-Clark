@@ -1,4 +1,7 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10509137&assignment_repo_type=AssignmentRepo)
+
+[![Tests](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/actions/workflows/tests.yml)
+
 # front-end-task-1
 
 
