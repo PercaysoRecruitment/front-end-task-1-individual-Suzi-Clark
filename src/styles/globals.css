@@ -37,7 +37,13 @@ p {
     font-size: 50pt;
     font-family: 'Cabin Sketch', sans-serif;
     color: rgb(25, 25, 160);
+    cursor: pointer;
 }
+
+.game-button:disabled {
+  cursor: not-allowed;
+}
+
 
 #click-instruction {
     color: rgb(236, 4, 4);
