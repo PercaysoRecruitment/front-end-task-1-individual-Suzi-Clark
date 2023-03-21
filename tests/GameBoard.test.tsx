@@ -6,8 +6,8 @@ import { gridTuple } from '@/types';
 
 describe('GameBoard', () => {
   const handleClick = jest.fn();
-  const noughtsNext = true;
-  const grid: gridTuple = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+  const noughtsNext = 12;
+  const grid: gridTuple = 'cat';
 
   test('renders game board div', () => {
     render(<GameBoard handleClick={handleClick} noughtsNext={noughtsNext} grid={grid} />);
