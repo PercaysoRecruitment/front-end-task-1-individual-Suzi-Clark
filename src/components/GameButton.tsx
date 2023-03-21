@@ -1,9 +1,9 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 type buttonProps = {
   text: string;
   id: string;
-  handleClick: any;
+  handleClick: MouseEventHandler<HTMLButtonElement>;
 };
 
 export default function GameButton({ text, id, handleClick }: buttonProps) {

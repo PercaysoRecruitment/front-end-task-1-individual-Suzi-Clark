@@ -1,16 +1,13 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 import GameButton from "./GameButton";
 import { gridArray } from "@/types";
 
 type gameBoardProps = {
-  handleClick: any;
+  handleClick: MouseEventHandler<HTMLButtonElement>;
   grid: gridArray;
 };
 
-export default function GameBoard({
-  handleClick,
-  grid,
-}: gameBoardProps) {
+export default function GameBoard({ handleClick, grid }: gameBoardProps) {
   return (
     <div>
       <p data-testid="instructions">

@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import GameBoard from '@/components/GameBoard'
 import React from 'react'
-import { useState, useEffect } from 'react'
+import { useState, useEffect, MouseEvent } from 'react'
 import { gridArray } from '@/types'
 import EndGame from '@/components/EndGame'
 
@@ -17,16 +17,16 @@ import EndGame from '@/components/EndGame'
 //4) disables the button after it has been clicked. 
 // handleClick should just take (e: React.ClickEvent<HTMLInputElement>) as arg
 //5) call the win checker function from index.
-
 // EndGame rendered conditionally if win is true
+
 type endConditions = 'Progress' | "X's Win!" | "0's Win!" | "It's a Draw!"
 
 export default function Home() {
   const [win, setWin] = useState<endConditions>('Progress')
-  const [noughtsNext, setNoughtsNext] = useState(true)
+  const [noughtsNext, setNoughtsNext] = useState<boolean>(true)
   const [grid, setGrid] = useState<gridArray>([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' '])
 
-  function handleClick(e: Event) {
+  function handleClick(e: MouseEvent<HTMLButtonElement>) {
     const target = e.target as HTMLButtonElement;
     if (target) {
       target.disabled = true;
