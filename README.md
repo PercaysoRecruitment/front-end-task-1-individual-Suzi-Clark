@@ -1,6 +1,9 @@
 [![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-c66648af7eb3fe8bc4f294546bfd86ef473780cde1dea487d3c4ff354943c9ae.svg)](https://classroom.github.com/online_ide?assignment_repo_id=10509137&assignment_repo_type=AssignmentRepo)
 # front-end-task-1
 
+
+## Please see my [planning](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/blob/main/plan/plan.md)
+
 ## The Challenge
 The challenge is to create a website to play the classic game of tic-tac-toe. You must display the board and alow two users to take it in turns to place their counter on the board. A winning line is 3 of the same counter in a horizontal, vertical or diaganal path.
 
