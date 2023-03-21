@@ -5,19 +5,6 @@ import { useState, useEffect, MouseEvent } from 'react'
 import { gridArray } from '@/types'
 import EndGame from '@/components/EndGame'
 
-//PLAN
-//Hold win, lose or game in progress state, render either GameBoard or EndGame depending on this
-//Hold logic for figuring whether anyone has won yet
-//Hold true/false boolean state for noughts or crosses next.
-//Hold on Click logic function and pass down to GameButton via GameBoard (or could make customhook)
-//onClick function: 
-//1) puts an 0 or X on the button as text
-//2) updates the state so the next click puts X in if 0 last time etc.
-//3) updates a grid state with which button now has an X or 0
-//4) disables the button after it has been clicked. 
-// handleClick should just take (e: React.ClickEvent<HTMLInputElement>) as arg
-//5) call the win checker function from index.
-// EndGame rendered conditionally if win is true
 
 type endConditions = 'Progress' | "X's Win!" | "0's Win!" | "It's a Draw!"
 
