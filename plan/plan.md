@@ -16,9 +16,9 @@
 - Fix issue where you have to click again after you have won for the game to update ✅ (FIXED - useEffect)
 - research github actions ✅
 - try to automate tests with GitHub Actions ✅
-- Custom hooks
-- Check I have done FP properly and tidy any 'any's
-- CSS it
+- Custom hooks ✅
+- Check I have done FP properly and tidy any 'any's ✅
+- CSS it ✅
 - Cypress tests
 - deploy
 
@@ -42,7 +42,7 @@
 
 ## Use FP
 - Pure functions ✅
-- Don't mutate data (map instead of for loops, push/pop/slice etc)
-- Use higher order functions where necessary to abstract out functionality
+- Don't mutate data (map instead of for loops, push/pop/slice etc) ✅
+- Use higher order functions where necessary to abstract out functionality ✅
 - Declare variables with const and initialise at point of declaration ✅
-- Avoid Global Variables
+- Avoid Global Variables ✅
