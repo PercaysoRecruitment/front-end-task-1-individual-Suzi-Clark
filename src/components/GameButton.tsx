@@ -1,20 +1,20 @@
-import React, { MouseEventHandler } from "react";
+import React, { MouseEventHandler } from 'react';
 
 type buttonProps = {
   text: string;
   id: string;
-  handleClick: MouseEventHandler<HTMLButtonElement>;
+  handleGameClick: MouseEventHandler<HTMLButtonElement>;
 };
 
-export default function GameButton({ text, id, handleClick }: buttonProps) {
+export default function GameButton({ text, id, handleGameClick }: buttonProps) {
   return (
     <div>
       <button
-        data-testid="game-button"
-        type="button"
-        className="game-button"
+        data-testid='game-button'
+        type='button'
+        className='game-button'
         id={id}
-        onClick={handleClick}
+        onClick={handleGameClick}
       >
         {text}
       </button>
