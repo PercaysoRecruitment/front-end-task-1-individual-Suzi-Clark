@@ -17,6 +17,9 @@ export default function useWinCheck(): winCustomHook {
       console.log(grid);
       setWin("It's a Draw!");
     }
+    else {
+      setWin("Progress");
+    }
   }
   return [win, winCheck];
 }

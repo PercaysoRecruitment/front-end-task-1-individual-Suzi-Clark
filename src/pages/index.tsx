@@ -28,6 +28,13 @@ export default function Home() {
     }
   }
 
+  // created function to reset states if player wants to play again instead of page refresh
+  // this means it would be much easier to allow score tracking over multiple games if the project was extended in future
+  function handlePlayAgain(): void {
+    setNoughtsNext(true);
+    setGrid([' ', ' ', ' ', ' ', ' ', ' ',' ', ' ', ' ']);
+  }
+
   useEffect(() => {
     winCheck(grid);
   }, [grid])
@@ -44,7 +51,7 @@ export default function Home() {
           <h1>Noughts & Crosses</h1>
           {(win === 'Progress') ?
           (<GameBoard handleClick={handleClick} grid={grid}/>) :
-          (<EndGame winner={win}/>)
+          (<EndGame winner={win} handlePlayAgain={handlePlayAgain}/>)
           }
       </main>
     </>
