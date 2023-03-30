@@ -16,8 +16,9 @@ function winLogic(grid: gridArray, n: string): boolean {
   || ((grid[0] === n) && (grid[4] === n) && (grid[8] === n))
   ) {
     return true;
+  } else {
+    return false;
   }
-  return false;
 }
 
 export default function useWinCheck(): winCustomHook {
