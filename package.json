@@ -7,8 +7,9 @@
     "test": "jest",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
-    "coverage": "nyc npm run test"
+    "coverage": "nyc npm run test",
+    "lint": "eslint . --max-warnings 5",
+    "lint:fix": "eslint . --fix --max-warnings 5"
   },
   "dependencies": {
     "next": "13.2.4",
@@ -16,6 +17,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
+    "@percaysoinform/linting": "^0.0.4",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^14.0.0",
     "@types/jest": "^29.5.0",

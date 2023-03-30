@@ -6,11 +6,13 @@ type endProps = {
 };
 
 export default function EndGame({ winner, handlePlayAgain }: endProps) {
-
   return (
-    <div data-testid='end-game'>
-      <h2>{winner}!!</h2>
-      <button type='button' onClick={handlePlayAgain} id='play-again'>
+    <div data-testid="end-game">
+      <h2>
+        {winner}
+        !!
+      </h2>
+      <button type="button" onClick={handlePlayAgain} id="play-again">
         Play Again?
       </button>
     </div>
