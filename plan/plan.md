@@ -46,3 +46,5 @@
 - Use higher order functions where necessary to abstract out functionality ✅
 - Declare variables with const and initialise at point of declaration ✅
 - Avoid Global Variables ✅
+
+:)
