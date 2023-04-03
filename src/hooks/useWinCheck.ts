@@ -1,3 +1,5 @@
+/* eslint-disable sonarjs/cognitive-complexity */
+/* eslint-disable complexity */
 import { useState } from 'react';
 import { gridArray } from '../types';
 
@@ -5,7 +7,7 @@ type endConditions = 'Progress' | 'X\'s Win!' | '0\'s Win!' | 'It\'s a Draw!'
 type winCustomHook = [endConditions, (grid: gridArray) => void]
 
 function winLogic(grid: gridArray, n: string): boolean {
-  if (
+  return (
     ((grid[0] === n) && (grid[1] === n) && (grid[2] === n))
   || ((grid[3] === n) && (grid[4] === n) && (grid[5] === n))
   || ((grid[6] === n) && (grid[7] === n) && (grid[8] === n))
@@ -13,12 +15,7 @@ function winLogic(grid: gridArray, n: string): boolean {
   || ((grid[1] === n) && (grid[4] === n) && (grid[7] === n))
   || ((grid[2] === n) && (grid[5] === n) && (grid[8] === n))
   || ((grid[6] === n) && (grid[4] === n) && (grid[2] === n))
-  || ((grid[0] === n) && (grid[4] === n) && (grid[8] === n))
-  ) {
-    return true;
-  } else {
-    return false;
-  }
+  || ((grid[0] === n) && (grid[4] === n) && (grid[8] === n)));
 }
 
 export default function useWinCheck(): winCustomHook {

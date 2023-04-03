@@ -22,6 +22,7 @@ export default function GameBoard({ handleGameClick, grid }: gameBoardProps) {
       <div data-testid="game-board" className="game-board">
         {grid.map((item, index) => (
           <GameButton
+            // eslint-disable-next-line react/no-array-index-key
             key={index.toString()}
             text={item}
             id={index.toString()}
