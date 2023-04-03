@@ -6,6 +6,7 @@ module.exports = {
   },
   overrides: [],
   rules: {
+    'linebreak-style': 'off',
     'react/jsx-filename-extension': [2, { extensions: ['.js', '.jsx', '.ts', '.tsx'] }],
   },
 };
