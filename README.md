@@ -4,8 +4,8 @@
 
 [![Tests](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/actions/workflows/tests.yml/badge.svg?branch=main)](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/actions/workflows/tests.yml)
 
-## Please see my [planning](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/blob/main/plan/plan.md)
-## Deployed [HERE](https://noughts-crosses-suzi.netlify.app/)
+- Please see my [planning](https://github.com/PercaysoRecruitment/front-end-task-1-individual-Suzi-Clark/blob/main/plan/plan.md)
+- Deployed [HERE](https://noughts-crosses-suzi.netlify.app/)
 
 
 ## The Challenge
