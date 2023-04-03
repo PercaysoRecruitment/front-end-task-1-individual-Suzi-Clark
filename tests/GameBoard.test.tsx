@@ -1,13 +1,12 @@
-import React from "react";
-import { render, screen, fireEvent } from "@testing-library/react";
-import '@testing-library/jest-dom'
-import GameBoard from "@/components/GameBoard";
-import { gridTuple } from '@/types';
+import React, { MouseEventHandler } from 'react';
+import { render, screen } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import GameBoard from '../src/components/GameBoard';
+import { gridArray } from '../src/types';
 
 describe('GameBoard', () => {
-  const handleClick = jest.fn();
-  const noughtsNext = true;
-  const grid: gridTuple = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
+  const handleClick: MouseEventHandler<HTMLButtonElement> = jest.fn();
+  const grid: gridArray = [' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' '];
 
   test('renders game board div', () => {
     render(<GameBoard handleClick={handleClick} grid={grid} />);
@@ -23,7 +22,7 @@ describe('GameBoard', () => {
 
   test('renders instructions on the page', () => {
     render(<GameBoard handleClick={handleClick} grid={grid} />);
-    const info = screen.getByTestId('instructions')
+    const info = screen.getByTestId('instructions');
     expect(info).toBeInTheDocument();
-  })
+  });
 });

@@ -10,9 +10,9 @@ export default function GameButton({ text, id, handleGameClick }: buttonProps) {
   return (
     <div>
       <button
-        data-testid='game-button'
-        type='button'
-        className='game-button'
+        data-testid="game-button"
+        type="button"
+        className="game-button"
         id={id}
         onClick={handleGameClick}
       >

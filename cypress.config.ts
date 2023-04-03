@@ -1,10 +1,12 @@
-import { defineConfig } from "cypress";
+/* eslint-disable unused-imports/no-unused-vars */
+/* eslint-disable import/no-extraneous-dependencies */
+import { defineConfig } from 'cypress';
 
 export default defineConfig({
   e2e: {
     setupNodeEvents(on, config) {
       // implement node event listeners here
     },
-    experimentalStudio: true
+    experimentalStudio: true,
   },
 });
