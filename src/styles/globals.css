@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cabin+Sketch:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC&family=Cabin+Sketch:wght@700&family=Patrick+Hand&display=swap');
+
+body {
+    text-align: center;
+    background-color: rgb(238, 229, 229);
+  }
+
+h1 {
+    font-family: 'Amatic SC', sans-serif;
+    font-size: 40pt;
+    color: rgb(25, 25, 160);
+}
+
+h2 {
+    color: rgb(236, 4, 4);
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: 30pt;
+}
+
+p {
+    font-family: 'Patrick Hand', sans-serif;
+    font-size: larger;
+}
+
+.game-board {
+    display: grid;   
+    grid-template-columns: 15vh 15vh 15vh;
+    grid-auto-rows: 15vh;
+    justify-content: center;
+}
+
+.game-button {
+    width: 95%;
+    height: 95%;
+    font-size: 50pt;
+    font-family: 'Cabin Sketch', sans-serif;
+    color: rgb(25, 25, 160);
+    cursor: pointer;
+}
+
+.game-button:disabled {
+  cursor: not-allowed;
+}
+
+
+#click-instruction {
+    color: rgb(236, 4, 4);
+}
+
+#play-again {
+  background-color: rgb(236, 4, 4);
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  font-family: 'Patrick Hand', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 1.75rem;
+  padding: .75rem 1.65rem;
+  position: center;
+  text-align: center;
+  text-decoration: none #000000 solid;
+  text-decoration-thickness: auto;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+#play-again:focus {
+  outline: 0;
+}
+
+#play-again:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+#play-again:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+
+@media (min-width: 768px) {
+  #play-again {
+    padding: .75rem 3rem;
+    font-size: 1.25rem;
+  }
+}
